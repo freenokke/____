@@ -1,0 +1,14 @@
+:root {
+	color-scheme: light;
+
+	--color-back-primary: var(--color-white-darker);
+	--color-back-secondary: var(--color-lighter);
+
+	--color-text-primary: var(--color-black);
+	--color-text-secondary: var(--color-darker);
+	--color-text-error: var(--color-red);
+
+	--color-border: var(--color-lighter);
+	--color-shadow-lighter: var(--color-white);
+	--color-shadow-darker: var(--color-grey-lighter);
+}

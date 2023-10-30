@@ -1,0 +1,14 @@
+/* Global */
+@import 'global/global';
+
+/* Colors */
+@import 'colors/colors';
+
+
+@media (prefers-color-scheme: light) {
+  @import 'colors/light';
+}
+
+@media (prefers-color-scheme: dark) {
+  @import 'colors/dark';
+}

@@ -22,18 +22,20 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     test: /\.s[ac]ss$/i,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+      'css-loader',
       {
-        loader: 'css-loader',
+        loader: 'sass-loader',
         options: {
-          modules: {
-            auto: (resPath: string) => resPath.includes('.module.'),
-            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
-          },
+          sourceMap: true,
         },
       },
-      'sass-loader',
     ],
   };
 
-  return [typeScriptLoader, cssLoader, fileLoader];
+  const htmlLoader = {
+    test: /\.html$/i,
+    loader: "html-loader",
+  }
+
+  return [typeScriptLoader, cssLoader, fileLoader, htmlLoader];
 };

@@ -1,0 +1,88 @@
+@use "../../styles/mixins/mixins";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 1rem;
+  padding: 2em;
+  border-radius: 1rem;
+  box-shadow: inset -13px -13px 15px var(--color-shadow-darker),
+            inset 13px 13px 15px var(--color-shadow-lighter);
+  @include mixins.transition;
+
+  // .form__label
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    @include mixins.transition;
+    &:focus-within {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  // .form__input
+  &__input {
+    width: 100%;
+    padding: .5em;
+    outline: none;
+    color: var(--color-text-primary);
+    border-radius: 0.375rem;
+
+    // form__input_error
+    &_error {
+      border: 1px solid var(--color-text-error);
+    }
+  }
+
+  // .form__error
+  &__error {
+    color: var(--color-text-error);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 0;
+    text-align: center;
+
+    // .form__error_hidden
+    &_hidden {
+      display: none;
+    }
+  }
+
+  // .form__button
+
+  &__button {
+    width: max-content;
+    align-self: center;
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-text-secondary);
+    @include mixins.transition;
+    &:active {
+      scale: 0.97;
+    }
+    &:hover {
+      border-color: var(--color-text-border);
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  &__message {
+    margin: 0;
+    color: var(--text-color-primary);
+    text-align: center;
+    &_hidden {
+      display: none;
+    }
+  }
+}

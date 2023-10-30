@@ -3,10 +3,10 @@ import path from 'path';
 import { buildLoaders } from './configs/webpack/buildLoaders';
 import { buildPlugins } from './configs/webpack/buildPlugins';
 import { buildDevServer } from './configs/webpack/buildDevServer';
-import { BuildOptions, EnvList } from './configs/webpack/types';
+import { BuildMode, BuildOptions, EnvList } from './configs/webpack/types';
 
 export default (env: EnvList) => {
-  const mode = 'development';
+  const mode: BuildMode = 'development';
   const isDev = mode === 'development';
   const port = env.port || 3000;
 

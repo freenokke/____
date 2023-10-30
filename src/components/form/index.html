@@ -1,0 +1,29 @@
+<form class="form">
+  <label class="label form__label form__label_name" for="name-input">
+    Name
+    <input class="input form__input form__input_name" name="name" type="text" id="name-input" autocomplete="off" aria-required="true" aria-describedby="name-error">
+  </label>
+  <p class="form__error form__error_hidden" id="name-error" aria-hidden="true" aria-live="polite"></p>
+
+  <label class="label form__label form__label_email" for="email-input">
+    Email
+    <input class="input form__input form__input_email" name="email" type="email" id="email-input" autocomplete="off" aria-required="true" aria-describedby="email-error">
+  </label>
+  <p class="form__error form__error_hidden" id="email-error" aria-hidden="true" aria-live="polite"></p>
+
+  <label class="label form__label form__label_phone" for="phone-input">
+    Phone
+    <input class="input form__input form__input_phone" name="phone" type="text" id="phone-input" aria-required="true" aria-describedby="phone-error">
+  </label>
+  <p class="form__error form__error_hidden" id="phone-error" aria-hidden="true" aria-live="polite"></p>
+
+  <label class="label form__label form__label_message" for="message-input">
+    Message
+    <input class="input form__input form__input_message" name="message" id="message-input" autocomplete="off" aria-required="true" aria-describedby="message-error">
+  </label>
+  <p class="form__error form__error_hidden" id="message-error" aria-hidden="true" aria-live="polite"></p>
+  <button class="form__button" type="submit" aria-label="Submit Form">
+    Submit
+  </button>
+  <p class="form__message form__message_hidden"></p>
+</form>

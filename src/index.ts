@@ -1,1 +1,4 @@
-document.querySelector('body').innerHTML = '<h1>Hello</h1>'
+import { Form } from "./components/form";
+import './styles/index.scss';
+
+new Form(document.querySelector('body'))
